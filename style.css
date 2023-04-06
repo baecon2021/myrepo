@@ -1,0 +1,26 @@
+.header {
+    background-color: blanchedalmond;
+}
+
+.header span{
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.teste {
+    color: #000000;
+    font-size: 15px;
+    position: absolute;
+    box-sizing: content-box;
+    user-select: text;
+}
+
+.teste:hover {
+    color: darkcyan;
+    cursor: pointer;
+}
