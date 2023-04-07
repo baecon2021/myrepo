@@ -1,15 +1,28 @@
 .header {
     background-color: blanchedalmond;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    display: inline-block;
+    justify-content:space-between;
+    flex-direction: row;
 }
 
-.header span{
-    margin: 0;
-    padding: 10px;
-    position: absolute;
-    display: inline-block;
-    text-decoration: none;
+.header a{
+    background-color: antiquewhite;
     color: #000;
-    box-sizing: border-box;
+    padding: 10px;
+    box-sizing: content-box;
+    user-select: text;
+    text-decoration: none;
+}
+
+.header a:hover{
+    color: darkolivegreen;
+    box-sizing: content-box;
+    position: relative;
+    user-select: text;
+    transition: 0.2s;
 }
 
 .teste {
@@ -23,4 +36,10 @@
 .teste:hover {
     color: darkcyan;
     cursor: pointer;
+}
+
+.img_ul {
+    position: relative;
+    display: flex;
+    justify-content: right;
 }
