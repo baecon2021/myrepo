@@ -1,0 +1,1 @@
+btn = window.document.getElementById("btn")

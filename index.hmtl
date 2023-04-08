@@ -11,21 +11,31 @@
 
 <body>
     <header class="header">
-        <ul>
-            <a href="">pagina principal</a>
-            <a href="">social</a>
-            <a href="">menu</a>
-            <a href="" class="imh_ul"><img src="./img/58497.png" alt="" style="width: 20px; height: auto;"></a> 
-        </ul>
+        <a href="#" class="img_ul"><img src="./img/58497.png" alt="" style="width: 20px; height: auto;"></a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">pagina principal</a>
+                    <a href="#">social</a>
+                    <a href="#">menu</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <div>
+        <span>
             <p class="teste">teste</p>
-        </div>
+        </span>
+        <nav>
+            <ul>
+                <input type="text" id="input">
+                <span><button type="reset" id="btn">reescrever</button></span>
+            </ul>
+        </nav>
     </main>
     <footer>
-        
+
     </footer>
 </body>
-
+<script src="index.js"></script>
 </html>

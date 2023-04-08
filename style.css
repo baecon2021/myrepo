@@ -4,20 +4,27 @@
     width: 100%;
     display: flex;
     display: inline-block;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-direction: row;
 }
 
 .header a{
     background-color: antiquewhite;
-    color: #000;
+    color: #000000;
     padding: 10px;
     box-sizing: content-box;
     user-select: text;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.header a:hover{
+.header ul li {
+    list-style: none;
+    text-align: center;
+}
+
+
+.header a:hover {
     color: darkolivegreen;
     box-sizing: content-box;
     position: relative;
@@ -39,7 +46,9 @@
 }
 
 .img_ul {
+    margin: 10px;
+    padding: 20px;
     position: relative;
     display: flex;
-    justify-content: right;
+    float: right;
 }
