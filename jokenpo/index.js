@@ -1,7 +1,8 @@
-const playerText = document.querySelector("#Playertext");
-const computerText = document.querySelector("#Computertext");
-const resultText = document.querySelector("#Resulttext");
+const playerText = document.querySelector("#playerText");
+const computerText = document.querySelector("#computerText");
+const resultText = document.querySelector("#resultText");
 const choiceBtns = document.querySelectorAll(".choicebtn")
+let scorePlayer
 let player;
 let computer;
 let result;
