@@ -1,8 +1,10 @@
 const playerText = document.querySelector("#playerText");
 const computerText = document.querySelector("#computerText");
 const resultText = document.querySelector("#resultText");
+const scoreText = document.querySelector("#scoreText");
 const choiceBtns = document.querySelectorAll(".choicebtn")
-let scorePlayer
+let playerScore = 0;
+let computerScore = 0;
 let player;
 let computer;
 let result;
@@ -10,17 +12,19 @@ let result;
 choiceBtns.forEach(button => button.addEventListener("click", () => {
 
     player = button.textContent;
-    computerTurn()
+    computerTurn();
+    scoreText.textContent = `Player: ${playerScore} // ${computerScore} :Computador`
     playerText.textContent = `Player: ${player}`;
     computerText.textContent = `Computador: ${computer}`;
     resultText.textContent = checkWin();
+
 }));
 
-function computerTurn(){
+function computerTurn() {
 
     const randNum = Math.floor(Math.random() * 3) + 1;
 
-    switch(randNum){
+    switch (randNum) {
         case 1:
             computer = "PEDRA";
             break;
@@ -32,17 +36,41 @@ function computerTurn(){
     }
 }
 
-function checkWin(){
-    if (player == computer){
+function checkWin() {
+    if (player == computer) {
         return "Empate!";
     }
-    else if (computer == "PEDRA"){
-        return (player == "PAPEL") ? "Voce venceu!" : "Voce Perdeu!";
+    else if (computer == "PEDRA") {
+        return (player == "PAPEL") ?
+            (
+                playerScore = playerScore + 1,
+                "Voce venceu!"
+            ) :
+            (
+                computerScore = computerScore + 1,
+                "Voce perdeu!"
+            );
     }
-    else if (computer == "PAPEL"){
-        return (player == "TESOURA") ? "Voce venceu!" : "Voce perdeu!";
+    else if (computer == "PAPEL") {
+        return (player == "TESOURA") ?
+            (
+                playerScore ++,
+                "Voce venceu!"
+            ) :
+            (
+                computerScore ++,
+                "Voce perdeu!"
+            );
     }
-    else if (computer == "TESOURA"){
-        return (player == "PEDRA") ? "voce venceu!" : "Voce perdeu!"
-    }
-}
+    else if (computer == "TESOURA") {
+        return (player == "PEDRA") ?
+            (
+                playerScore ++,
+                "Voce venceu!"
+            ) :
+            (
+                computerScore ++,
+                "Voce perdeu!"
+            );
+    };
+};
